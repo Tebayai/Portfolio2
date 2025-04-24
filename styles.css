@@ -286,12 +286,25 @@ header nav a:hover {
     display: none;
   }
 
-    .projects .project-list.active{
-        display: flex;
-        gap: 2rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.projects .project-list.active{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projects .project-list img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit:cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.projects .project-list img:hover {
+    transform: scale(1.05);
+}
 
 /***************/
 /*contact section */
