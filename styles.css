@@ -1,0 +1,359 @@
+:root{
+    --bg-color:#0b0f1a;
+    --text-color:#fff;
+    --text-typing-color:#0addc3;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.separator{
+    width: 100%;
+    background-color: var(--text-typing-color);
+    height: 2px;
+}
+
+/***************/
+/*header section */
+/***************/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    border-bottom: 1px solid var(--text-typing-color);
+    background-color: var(--bg-color);
+    position: fixed;
+    width: 100%;
+  }
+  
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-left: 10%;
+  }
+
+header h1 a{
+    text-decoration: none;
+    color: var(--text-typing-color);
+}
+
+header nav {
+    margin-right: 10%;
+}
+  
+header  nav ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+  
+header nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+  
+header nav a:hover {
+    color: var(--text-typing-color);
+}
+
+
+
+/***************/
+/*hero section */
+/***************/
+
+.hero{
+    height:100vh;
+    background-color: var(--bg-color);
+    color:var(--text-color);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero .left-txt{
+    text-align: left;
+}
+
+.hero .left-txt p{
+    font-size: 1.5rem;
+}
+
+.hero .left-txt h2{
+    font-size: 5rem;
+    margin: 20px 0 20px 0;
+}
+
+.hero .text-3{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero .text-3 span{
+    color: var(--text-typing-color);
+}
+
+
+.hero .profile-img{
+    width: 60%;
+}
+
+.hero .btn{
+    background-color: var(--text-typing-color);
+    color: var(--bg-color);
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: auto;
+    text-decoration: none;
+}
+
+.hero .btn:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    background-color: var(--bg-color);
+    border: 2px solid var(--text-typing-color);
+    color: var(--text-typing-color);
+}
+
+
+/***************/
+/*about section */
+/***************/
+
+.about{
+    font-weight: 400;
+    padding: 2rem 0 4rem 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.about h2 {
+    position: relative;
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 60px;
+}
+
+.about-content{
+    /* align les contents toujours au centre en ligne pour avoir gauche et droite*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.about-content .column-left{
+    width:45%;
+}
+
+.about-content .column-left img{
+    height: 400px;
+    width:400px;
+}
+
+.about-content .column-right{
+    width:70%;
+    padding: 0 25px;
+}
+
+.about-content .column-right h3{
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.about-content .column-right p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+    margin: 30px 0;
+}
+
+.about-content .column-right .btn{
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+}
+
+.about-content .column-right a{
+    background-color:var(--text-typing-color);
+    color: var(--bg-color);
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: auto;
+    text-decoration: none;
+}
+
+.about-content .column-right a:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    background-color: var(--bg-color);
+    border: 2px solid var(--text-typing-color);
+    color: var(--text-typing-color);
+}
+
+
+/***************/
+/*projects section */
+/***************/
+
+
+.projects{
+    padding: 4rem 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.projects h2 {
+    position: relative;
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.projects-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.projects .projects-menu ul{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 30px 0;
+}
+
+.projects .projects-menu ul li{
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.projects .projects-menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-typing-color);
+  }
+  
+  .projects .projects-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--text-typing-color);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .projects .projects-menu ul li a.active::after {
+    width: 100%;
+  }
+
+/***************/
+/*contact section */
+/***************/
+
+.contact{
+    padding: 2rem 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.contact h2 {
+    position: relative;
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.contact .contact-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    gap: 3rem;
+    max-width: 1200px;
+    text-decoration: none;
+}
+
+.contact .contact-list .contact-item{
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.contact .contact-list .contact-item a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    text-decoration: none;
+    color: var(--bg-color);
+    background-color: var(--text-typing-color);
+    border: 2px solid transparent;
+    border-radius: 50%;
+    padding: auto;
+}
+
+.contact .contact-list .contact-item a:hover{
+    transform: scale(1.10);
+    transition: all 0.3s ease-in-out;
+    background-color: var(--bg-color);
+    border: 2px solid var(--text-typing-color);
+    color: var(--text-typing-color);
+}
+
+.contact .contact-list .contact-item a i{
+    font-size: 1.5rem;
+
+}
+
+
+
+
+
+
+
+
+  footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+  }

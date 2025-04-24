@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1><a href="#hero">Portfolio</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero section -->
+        <section class="hero" id="hero">
+            <div class="left-txt">
+                <p>Bienvenue sur mon portfolio, je m'appelle</p>
+                <h2>Yvänn Erick Guillard</h2>
+                <div class="text-3">Et je suis <span class="typing"></span></div>
+                <a href="#projects" class="btn">Voir mes projets</a>
+            </div>
+            <div class="right-img">
+                <img src="img/GuillardYvannErick.png" alt="Image de moi" class="profile-img">
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <!-- About section -->
+        <section class="about" id="about">
+            <h2>A propos de moi</h2>
+            <div class="about-content">
+                <div class="column-left">
+                    <img src="img/profileIllustration.png" alt="Illustration d'image de profile">
+                </div>
+                <div class="column-right">
+                    <h3>Je sais pas trouver du texte</h3>
+                    <p>Passionné par le monde du web, je suis actuellement en pleine formation pour devenir un infographiste/designer web. 
+                        Je m'intéresse particulièrement à la création de sites modernes, accessibles et esthétiquement plaisants. 
+                        Toujours à la recherche de nouvelles compétences, je suis actuellement à la recherche d'une opportunité d'apprentissage en design web pour approfondir mes connaissances et mettre en pratique les techniques que j'ai acquises. 
+                        Mon objectif est de créer des expériences utilisateur innovantes et de contribuer à des projets créatifs et dynamiques.</p>
+                    <div class="btn">
+                        <a href="content/CV.pdf" download>Télécharger mon CV</a>
+                        <a href="content/Portfolio.pdf" download>Télécharger mon Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <!-- Projets section -->
+         <section class="projects" id="projects">
+            <h2>Mes Projects</h2>
+            <nav class="projects-menu">
+                <ul>
+                    <li><a href="#photoshop" class="active">Photoshop</a></li>
+                    <li><a href="#illustrator">illustrator</a></li>
+                    <li><a href="#indesign">InDesign</a></li>
+                    <li><a href="#web">Web</a></li>
+                </ul>
+            </nav>
+            <div class="projects-content">
+                <!-- PhotoShop -->
+                <div class="project-list active" id="photoshop">
+                    <div class="project-item">
+                        <img src="img/Photoshop/Photoshop1.png" alt="Projet Photoshop 1">
+                        <h3>Projet Photoshop 1</h3>
+                        <p>Description du projet Photoshop 1.</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="img/Photoshop/Photoshop2.png" alt="Projet Photoshop 2">
+                        <h3>Projet Photoshop 2</h3>
+                        <p>Description du projet Photoshop 2.</p>
+                    </div>
+                </div>
+
+                <!-- illustrator -->
+                <div class="project-list" id="illustrator">
+                    <div class="project-item">
+                        <img src="img/illustrator/illustrator1.png" alt="Projet illustrator 1">
+                        <h3>Projet illustrator 1</h3>
+                        <p>Description du projet illustrator 1.</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="img/illustrator/illustrator2.png" alt="Projet illustrator 2">
+                        <h3>Projet illustrator 2</h3>
+                        <p>Description du projet illustrator 2.</p>
+                    </div>
+                </div>
+
+                <!-- InDesign -->
+                <div class="project-list" id="indesign">
+                    <div class="project-item">
+                        <img src="img/InDesign/InDesign1.png" alt="Projet InDesign 1">
+                        <h3>Projet InDesign 1</h3>
+                        <p>Description du projet InDesign 1.</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="img/InDesign/InDesign2.png" alt="Projet InDesign 2">
+                        <h3>Projet InDesign 2</h3>
+                        <p>Description du projet InDesign 2.</p>
+                    </div>
+                </div>
+
+                <!-- Web -->
+                <div class="project-list" id="web">
+                    <div class="project-item">
+                        <img src="img/Web/Web1.png" alt="Projet Web 1">
+                        <h3>Projet web 1</h3>
+                        <p>Description du projet web 1.</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="img/Web/Web2.png" alt="Projet Web 2">
+                        <h3>Projet web 2</h3>
+                        <p>Description du projet web 2.</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+        <!-- Contact -->
+        <div class="separator"></div>
+        <section class="contact" id="contact">
+            <h2>Contact</h2>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <a href="https://www.linkedin.com/in/yvann-erick-guillard-683b73285/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="contact-item">
+                    <a href="https://github.com/Tebayai">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li class="contact-item">
+                    <a href="https://www.instagram.com/yvannerickgfam/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="contact-item">
+                    <a href="https://discord.gg/Dv2FNJ6T">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- Footer -->
+        <div class="separator"></div>
+        <footer>
+            <p>&copy; 2025 YEG. Tous droits réservés.</p>
+        </footer>
+        
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+</html>
