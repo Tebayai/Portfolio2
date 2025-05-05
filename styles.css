@@ -7,6 +7,8 @@
     --base-font-size: 1rem; /* 16px */
 }
 
+body { scroll-behavior: smooth}
+
 * {
     margin: 0;
     padding: 0;
@@ -36,17 +38,15 @@ header {
     width: 100%;
 }
 
-header h1 {
+
+header .logo {
+    text-decoration: none;
+    color: var(--text-typing-color);
+    font-size: 2.5rem;
     font-size: 2.5rem;
     font-weight: 900;
     letter-spacing: 0.125rem;
     margin-left: 10%;
-}
-
-header h1 a {
-    text-decoration: none;
-    color: var(--text-typing-color);
-    font-size: 2.5rem;
 }
 
 header nav {
@@ -121,11 +121,11 @@ header nav a:hover {
     font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .hero .btn:hover {
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
     background-color: var(--bg-color);
     border: 0.125rem solid var(--text-typing-color);
     color: var(--text-typing-color);
@@ -141,6 +141,7 @@ header nav a:hover {
     padding: 2rem 0 4rem 0;
     background-color: var(--bg-color);
     color: var(--text-color);
+    z-index: 1;
 }
 
 .about h2 {
@@ -202,11 +203,11 @@ header nav a:hover {
     font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .about-content .column-right a:hover {
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
     background-color: var(--bg-color);
     border: 0.125rem solid var(--text-typing-color);
     color: var(--text-typing-color);
@@ -282,10 +283,11 @@ header nav a:hover {
 }
 
 .projects .project-list.active {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-items: center;
+    align-items: start;
 }
 
 .projects .project-list img {
@@ -347,11 +349,11 @@ header nav a:hover {
     background-color: var(--text-typing-color);
     border: 0.125rem solid transparent;
     border-radius: 50%;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact .contact-list .contact-item a:hover {
     transform: scale(1.10);
-    transition: all 0.3s ease-in-out;
     background-color: var(--bg-color);
     border: 0.125rem solid var(--text-typing-color);
     color: var(--text-typing-color);
@@ -377,3 +379,57 @@ footer {
 /****************/
 /* media queries section */
 /****************/
+
+@media (max-width: 1200px) {
+    .about-content .column-left{
+        width: 30%;
+    }
+    .projects .project-list.active {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:1024px){
+    .about-content .column-left img{
+        width: 15rem;
+        height:auto;
+    }
+}
+
+@media (max-width:768px){
+    .hero .right-img{
+        display: none;
+    }
+
+    .about-content .column-left img{
+        display: none;
+    }
+    .about-content .column-right {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+    .about-content{
+        display: block;
+    }
+    .about-content .column-right h3 {
+        font-size: 1.5rem;
+    }
+    .about-content .column-right .btn{
+        justify-content: center;
+    }
+    .about-content .column-right a{
+        font-size: 0.80rem;
+    }
+    .projects .project-list.active {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:480px){
+    .projects .project-list.active {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .projects .projects-menu ul {
+        gap: 0rem;
+    }
+}

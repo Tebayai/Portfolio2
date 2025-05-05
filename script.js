@@ -7,14 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const menuLinks = document.querySelectorAll('.projects-menu a');
 
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menuLinks.forEach(el => el.classList.remove('active'));
-      link.classList.add('active');
-    });
-  });
 
 
   const tabs = document.querySelectorAll('.projects-menu a');
@@ -36,5 +29,71 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetSection = document.querySelector(`#${targetId}`);
 
       targetSection.classList.add('active');
+    });
+  });
+
+
+  // affichage des images via js
+
+  const projects = {
+    photoshop:[
+      { img: "img/Photoshop/wolf.png", title: "wolf", desc: "description" },
+      { img: "img/Photoshop/1.png", title: "wolf", desc: "description" },
+      { img: "img/Photoshop/2.png", title: "wolf", desc: "description" },
+      { img: "img/Photoshop/3.png", title: "wolf", desc: "description" },
+      { img: "img/Photoshop/4.png", title: "wolf", desc: "description" },
+    ],
+    illustrator:[
+      { img: "img/illustrator/1.png", title: "Women", desc: "femme devant un mur" },
+      { img: "img/illustrator/2.png", title: "Houlette", desc: "Logo Houlette" },
+      { img: "img/illustrator/3.png", title: "Radioo voyage", desc: "Logo fictif de voyage" },
+      { img: "img/illustrator/4.png", title: "wolf", desc: "description" },
+      { img: "img/illustrator/5.png", title: "wolf", desc: "description" },
+    ],
+    indesign:[
+      { img: "img/inDesign/1.png", title: "wolf", desc: "description" },
+      { img: "img/inDesign/2.png", title: "wolf", desc: "description" },
+      { img: "img/inDesign/3.png", title: "wolf", desc: "description" },
+      { img: "img/inDesign/4.png", title: "wolf", desc: "description" },
+      { img: "img/inDesign/5.png", title: "wolf", desc: "description" },
+    ],
+    web:[
+      { img: "img/web/1.png", title: "wolf", desc: "description" },
+      { img: "img/web/2.png", title: "wolf", desc: "description" },
+      { img: "img/web/3.png", title: "wolf", desc: "description" },
+      { img: "img/web/4.png", title: "wolf", desc: "description" },
+      { img: "img/web/5.png", title: "wolf", desc: "description" },
+    ]
+  };
+
+
+  // initialise le contenu de la section projets
+  const projectContainer = document.querySelector('.projects-content');
+  const menuLinks = document.querySelectorAll('.projects-menu a');
+
+function renderProjects(category) {
+    const items = projects[category] || [];
+    projectContainer.innerHTML = `
+    <div class="project-list active" id="${category}">
+    ${items.map(project => `
+      <div class="project-item">
+        <img src="${project.img}" alt="${project.title}" loading="lazy" />
+        <h3>${project.title}</h3>
+        <p>${project.desc}</p>
+      </div>
+    `).join('')}
+    </div>
+    `;
+}
+
+// initialiser avec photoshop
+renderProjects('photoshop');
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      menuLinks.forEach(el => el.classList.remove('active'));
+      link.classList.add('active');
+      renderProjects(link.dataset.target); // actulise le contenu lors du clic
     });
   });
