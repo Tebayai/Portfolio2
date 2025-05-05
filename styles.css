@@ -314,11 +314,14 @@ header .menu a:hover {
     align-items: start;
 }
 
+
+
 .projects .project-list img {
     width: 12.5rem;
     height: 12.5rem;
     border-radius: 0.625rem;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
