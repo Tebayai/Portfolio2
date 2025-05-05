@@ -36,6 +36,7 @@ header {
     background-color: var(--bg-color);
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 
@@ -78,6 +79,7 @@ header .menu a:hover {
     width: 25px;
     height: 18px;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .burger span {
@@ -86,6 +88,7 @@ header .menu a:hover {
     background: #fff;
     border-radius: 2px;
     transition: 0.3s;
+    z-index: 1000;
 }
 
 /****************/
@@ -521,7 +524,7 @@ footer {
 
     .burger {
         display: flex;
-        z-index: 999;
+        z-index: 2;
     }
 
     .menu.mobile {
@@ -575,7 +578,13 @@ footer {
     }
 
     .contact .contact-list {
-        gap: 2rem;
+        gap: 1rem;
+    }
+
+    .projects .projects-menu ul li {
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0.625rem 0.5rem;
     }
 
 }

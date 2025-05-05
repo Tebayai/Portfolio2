@@ -36,34 +36,33 @@ document.addEventListener("DOMContentLoaded", function () {
   // affichage des images via js
 
   const projects = {
-    photoshop:[
-      { img: "img/Photoshop/wolf.png", title: "wolf", desc: "Photo composition d'un loup fait a l'aide de 3 image",},
-      { img: "img/Photoshop/1.png", title: "Homme sur une voiture", desc: "Photo compostion homme sur une voiture" },
-      { img: "img/Photoshop/2.png", title: "femme entre dans un apareil", desc: "Photo composition femme entrant dans une apareil" },
-      { img: "img/Photoshop/3.jpg", title: "chanel posé sur la table", desc: "parfum posé sur une table" },
-      { img: "img/Photoshop/4.png", title: "osco banniere", desc: "osco banniere" },
+    photoshop: [
+      { img: "img/Photoshop/wolf.png", title: "Loup dans la nuit", desc: "Composition photo réaliste d’un loup réalisée à partir de trois images." },
+      { img: "img/Photoshop/1.png", title: "Homme sur une voiture", desc: "Montage photo mettant en scène un homme debout sur une voiture." },
+      { img: "img/Photoshop/2.png", title: "Fusion homme-machine", desc: "Photomontage d’une femme semblant entrer dans un appareil." },
+      { img: "img/Photoshop/3.jpg", title: "Parfum Chanel", desc: "Mise en scène d’un flacon de parfum Chanel posé élégamment sur une table." },
+      { img: "img/Photoshop/4.png", title: "Bannière Osco", desc: "Création graphique d’une bannière promotionnelle pour la marque Osco." },
     ],
-    illustrator:[
-      { img: "img/illustrator/1.png", title: "Women", desc: "femme devant un mur" },
-      { img: "img/illustrator/2.png", title: "Houlette", desc: "Logo Houlette" },
-      { img: "img/illustrator/3.png", title: "Radioo voyage", desc: "Logo fictif de voyage" },
-      { img: "img/illustrator/4.png", title: "composition", desc: "illustration fictive pour le festival de science fiction lyon" },
-      { img: "img/illustrator/5.png", title: "illustration logo", desc: "Logo fictif" },
+    illustrator: [
+      { img: "img/illustrator/1.png", title: "Femme au mur", desc: "Illustration stylisée d’une femme devant un mur texturé." },
+      { img: "img/illustrator/2.png", title: "Logo Houlette", desc: "Création d’un logo pour une entreprise fictive nommée Houlette." },
+      { img: "img/illustrator/3.png", title: "Radio Voyage", desc: "Logo fictif pour une radio thématique sur le voyage." },
+      { img: "img/illustrator/4.png", title: "Festival de science-fiction", desc: "Affiche illustrée pour un festival de science-fiction à Lyon." },
+      { img: "img/illustrator/5.png", title: "Logo abstrait", desc: "Création d’un logo conceptuel pour un projet fictif." },
     ],
-    indesign:[
-      { img: "img/inDesign/1.png", title: "Page de garde magazine", desc: "Page de garde magazine" },
-      { img: "img/inDesign/2.png", title: "Page de magazine", desc: "Page de magazine" },
-      { img: "img/inDesign/3.png", title: "Page de magazine sur akira toriyama", desc: "Page de magazine sur akira toriyama" },
-      { img: "img/inDesign/4.png", title: "Page de magazine sur des films", desc: "Page de magazine sur des films" },
-      { img: "img/inDesign/5.png", title: "Page de garde magazine", desc: "Page de garde magazine" },
+    indesign: [
+      { img: "img/inDesign/1.png", title: "Couverture de magazine", desc: "Conception d’une page de couverture pour un magazine culturel." },
+      { img: "img/inDesign/2.png", title: "Double page magazine", desc: "Mise en page d’un article illustré dans un magazine." },
+      { img: "img/inDesign/3.png", title: "Hommage à Akira Toriyama", desc: "Double page magazine dédiée à l’univers d’Akira Toriyama." },
+      { img: "img/inDesign/4.png", title: "Sélection cinéma", desc: "Page magazine présentant une sélection de films à découvrir." },
+      { img: "img/inDesign/5.png", title: "Couverture alternative", desc: "Proposition de couverture pour un magazine." },
     ],
-    web:[
-      { img: "img/web/1.png", title: "NightCar", desc: "Click pour voir le site", link: "https://tebayai.github.io/carNight/main.html" },
-      { img: "img/web/2.png", title: "wolf", desc: "description" },
-      { img: "img/web/3.png", title: "wolf", desc: "description" },
+    web: [
+      { img: "img/web/1.png", title: "NightCar", desc: "Site vitrine interactif pour une marque automobile fictive. Cliquez pour le visiter.", link: "https://tebayai.github.io/carNight/main.html" },
+      { img: "img/web/2.png", title: "Site expérimental 1", desc: "Prototype de site web avec animations CSS et structure responsive." },
+      { img: "img/web/3.png", title: "Site expérimental 2", desc: "Exercice de design web basé sur une maquette moderne et épurée." },
     ]
   };
-
 
   // initialise le contenu de la section projets
   const projectContainer = document.querySelector('.projects-content');
