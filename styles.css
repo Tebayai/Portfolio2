@@ -527,12 +527,12 @@ footer {
 
     .burger {
         display: flex;
-        z-index: 2;
+        z-index: 3;
     }
 
     .menu.mobile {
         position: fixed;
-        top: 10rem; /* Pour qu'il ne se chevauche pas avec le header */
+        top: 6.55rem; /* Pour qu'il ne se chevauche pas avec le header */
         left: 0;
         width: 100%;
         height: 100vh;
@@ -541,8 +541,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 2rem;
-        z-index: 999;
+        z-index: 1;
     }
 
     .menu.mobile ul {
