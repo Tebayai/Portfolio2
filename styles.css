@@ -521,6 +521,7 @@ footer {
 
     .burger {
         display: flex;
+        z-index: 999;
     }
 
     .menu.mobile {
@@ -571,6 +572,10 @@ footer {
 
     .projects .projects-menu ul {
         gap: 0rem;
+    }
+
+    .contact .contact-list {
+        gap: 2rem;
     }
 
 }
