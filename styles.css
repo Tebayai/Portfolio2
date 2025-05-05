@@ -49,11 +49,11 @@ header .logo {
     margin-left: 10%;
 }
 
-header nav {
+header .menu {
     margin-right: 10%;
 }
 
-header nav ul {
+header .menu ul {
     display: flex;
     gap: 3rem;
     list-style: none;
@@ -61,13 +61,13 @@ header nav ul {
     font-weight: 800;
 }
 
-header nav a {
+header .menu a {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
-header nav a:hover {
+header .menu a:hover {
     color: var(--text-typing-color);
 }
 
@@ -93,7 +93,7 @@ header nav a:hover {
     font-size: 1.5rem;
 }
 
-.hero .left-txt h2 {
+.hero .left-txt h1 {
     font-size: 5rem;
     margin: 1.25rem 0;
 }
@@ -299,9 +299,41 @@ header nav a:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-.projects .project-list img:hover {
-    transform: scale(1.05);
+.projects .project-list .project-item h3,
+.projects .project-list .project-item p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
 }
+
+.projects .project-list .project-item h3 {
+    bottom: 2.5rem; /* pour que le titre soit au-dessus de la desc */
+  }
+  
+  .projects .project-list .project-item p {
+    bottom: 0.5rem;
+  }
+  
+  .projects .project-list .project-item:hover h3,
+  .projects .project-list .project-item:hover p {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .projects .project-list .project-item:hover {
+    transform: scale(1.05);
+  }
+
+
 
 /****************/
 /* contact section */
