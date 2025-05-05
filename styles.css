@@ -43,7 +43,6 @@ header .logo {
     text-decoration: none;
     color: var(--text-typing-color);
     font-size: 2.5rem;
-    font-size: 2.5rem;
     font-weight: 900;
     letter-spacing: 0.125rem;
     margin-left: 10%;
@@ -71,6 +70,24 @@ header .menu a:hover {
     color: var(--text-typing-color);
 }
 
+/* --- BURGER (pour mobile) --- */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
 /****************/
 /* hero section */
 /****************/
@@ -87,6 +104,7 @@ header .menu a:hover {
 
 .hero .left-txt {
     text-align: left;
+    margin-left: 2rem;
 }
 
 .hero .left-txt p {
@@ -100,7 +118,7 @@ header .menu a:hover {
 
 .hero .text-3 {
     font-size: 2rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2rem;
 }
 
 .hero .text-3 span {
@@ -109,7 +127,11 @@ header .menu a:hover {
 }
 
 .hero .profile-img {
-    width: 60%;
+
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+
 }
 
 .hero .btn {
@@ -130,7 +152,6 @@ header .menu a:hover {
     border: 0.125rem solid var(--text-typing-color);
     color: var(--text-typing-color);
 }
-
 /****************/
 /* about section */
 /****************/
@@ -299,7 +320,7 @@ header .menu a:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-.projects .project-list .project-item h3,
+
 .projects .project-list .project-item p {
   position: absolute;
   left: 0;
@@ -313,20 +334,14 @@ header .menu a:hover {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
+  border-radius: 0 0 0.625rem 0.625rem;
 }
 
-.projects .project-list .project-item h3 {
-    bottom: 2.5rem; /* pour que le titre soit au-dessus de la desc */
-  }
   
-  .projects .project-list .project-item p {
-    bottom: 0.5rem;
-  }
-  
-  .projects .project-list .project-item:hover h3,
   .projects .project-list .project-item:hover p {
     opacity: 1;
     pointer-events: auto;
+    transform: translateY(-0.25rem);
   }
   
   .projects .project-list .project-item:hover {
@@ -422,6 +437,17 @@ footer {
 }
 
 @media (max-width:1024px){
+    .hero .left-txt{
+        width: 100%;
+    }
+    .hero .left-txt h1 {
+        font-size: 4rem;
+    }
+    .hero .profile-img {
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+    }
     .about-content .column-left img{
         width: 15rem;
         height:auto;
@@ -429,8 +455,36 @@ footer {
 }
 
 @media (max-width:768px){
-    .hero .right-img{
-        display: none;
+
+    .hero{
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 1rem;
+    }
+
+    .hero .left-txt{
+        order: 1;
+        text-align: center;
+        margin-left: 0rem;
+    }
+
+    .hero .text-3,
+    .hero .text-3 span{
+        font-size: 1.5rem;
+    }
+
+    .hero .profile-img {
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .hero .left-txt h1 {
+        font-size: 3rem;
+    }
+
+    .hero .left-txt p {
+        font-size: 1.2rem;
     }
 
     .about-content .column-left img{
@@ -455,13 +509,62 @@ footer {
     .projects .project-list.active {
         grid-template-columns: repeat(2, 1fr);
     }
+    header .menu {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .menu.mobile {
+        position: fixed;
+        top: 10rem; /* Pour qu'il ne se chevauche pas avec le header */
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+        z-index: 999;
+    }
+
+    .menu.mobile ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .menu.mobile ul li a {
+        font-size: 1.5rem;
+        color: var(--text-color);
+    }
+
+    /* Animation pour le burger icon (rotation) */
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(6px);
+    }
+
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-6px);
+    }
 }
 
-@media (max-width:480px){
+@media (max-width: 480px) {
+
+
     .projects .project-list.active {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .projects .projects-menu ul {
         gap: 0rem;
     }
+
 }

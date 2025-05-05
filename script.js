@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const projects = {
     photoshop:[
-      { img: "img/Photoshop/wolf.png", title: "wolf", desc: "description" },
-      { img: "img/Photoshop/1.png", title: "wolf", desc: "description" },
-      { img: "img/Photoshop/2.png", title: "wolf", desc: "description" },
+      { img: "img/Photoshop/wolf.png", title: "wolf", desc: "Photo composition d'un loup fait a l'aide de 3 image",},
+      { img: "img/Photoshop/1.png", title: "Test", desc: "description" },
+      { img: "img/Photoshop/2.png", title: "img3", desc: "description" },
       { img: "img/Photoshop/3.png", title: "wolf", desc: "description" },
-      { img: "img/Photoshop/4.png", title: "wolf", desc: "description" },
+      { img: "img/Photoshop/4.png", title: "test3", desc: "description" },
     ],
     illustrator:[
       { img: "img/illustrator/1.png", title: "Women", desc: "femme devant un mur" },
@@ -78,7 +78,6 @@ function renderProjects(category) {
     ${items.map(project => `
       <div class="project-item">
         <img src="${project.img}" alt="${project.title}" loading="lazy" />
-        <h3>${project.title}</h3>
         <p>${project.desc}</p>
       </div>
     `).join('')}
@@ -96,4 +95,13 @@ renderProjects('photoshop');
       link.classList.add('active');
       renderProjects(link.dataset.target); // actulise le contenu lors du clic
     });
+  });
+
+
+  const burger = document.getElementById('burger');
+  const menu = document.querySelector('.menu');
+
+  burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      menu.classList.toggle('mobile');
   });
