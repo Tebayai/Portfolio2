@@ -349,6 +349,12 @@ header .menu a:hover {
   }
 
 
+  .project-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
 
 /****************/
 /* contact section */

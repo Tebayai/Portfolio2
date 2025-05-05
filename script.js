@@ -38,31 +38,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const projects = {
     photoshop:[
       { img: "img/Photoshop/wolf.png", title: "wolf", desc: "Photo composition d'un loup fait a l'aide de 3 image",},
-      { img: "img/Photoshop/1.png", title: "Test", desc: "description" },
-      { img: "img/Photoshop/2.png", title: "img3", desc: "description" },
-      { img: "img/Photoshop/3.png", title: "wolf", desc: "description" },
-      { img: "img/Photoshop/4.png", title: "test3", desc: "description" },
+      { img: "img/Photoshop/1.png", title: "Homme sur une voiture", desc: "Photo compostion homme sur une voiture" },
+      { img: "img/Photoshop/2.png", title: "femme entre dans un apareil", desc: "Photo composition femme entrant dans une apareil" },
+      { img: "img/Photoshop/3.jpg", title: "chanel posé sur la table", desc: "parfum posé sur une table" },
+      { img: "img/Photoshop/4.png", title: "osco banniere", desc: "osco banniere" },
     ],
     illustrator:[
       { img: "img/illustrator/1.png", title: "Women", desc: "femme devant un mur" },
       { img: "img/illustrator/2.png", title: "Houlette", desc: "Logo Houlette" },
       { img: "img/illustrator/3.png", title: "Radioo voyage", desc: "Logo fictif de voyage" },
-      { img: "img/illustrator/4.png", title: "wolf", desc: "description" },
-      { img: "img/illustrator/5.png", title: "wolf", desc: "description" },
+      { img: "img/illustrator/4.png", title: "composition", desc: "illustration fictive pour le festival de science fiction lyon" },
+      { img: "img/illustrator/5.png", title: "illustration logo", desc: "Logo fictif" },
     ],
     indesign:[
-      { img: "img/inDesign/1.png", title: "wolf", desc: "description" },
-      { img: "img/inDesign/2.png", title: "wolf", desc: "description" },
-      { img: "img/inDesign/3.png", title: "wolf", desc: "description" },
-      { img: "img/inDesign/4.png", title: "wolf", desc: "description" },
-      { img: "img/inDesign/5.png", title: "wolf", desc: "description" },
+      { img: "img/inDesign/1.png", title: "Page de garde magazine", desc: "Page de garde magazine" },
+      { img: "img/inDesign/2.png", title: "Page de magazine", desc: "Page de magazine" },
+      { img: "img/inDesign/3.png", title: "Page de magazine sur akira toriyama", desc: "Page de magazine sur akira toriyama" },
+      { img: "img/inDesign/4.png", title: "Page de magazine sur des films", desc: "Page de magazine sur des films" },
+      { img: "img/inDesign/5.png", title: "Page de garde magazine", desc: "Page de garde magazine" },
     ],
     web:[
-      { img: "img/web/1.png", title: "wolf", desc: "description" },
+      { img: "img/web/1.png", title: "NightCar", desc: "Click pour voir le site", link: "https://tebayai.github.io/carNight/main.html" },
       { img: "img/web/2.png", title: "wolf", desc: "description" },
       { img: "img/web/3.png", title: "wolf", desc: "description" },
-      { img: "img/web/4.png", title: "wolf", desc: "description" },
-      { img: "img/web/5.png", title: "wolf", desc: "description" },
     ]
   };
 
@@ -71,17 +69,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const projectContainer = document.querySelector('.projects-content');
   const menuLinks = document.querySelectorAll('.projects-menu a');
 
-function renderProjects(category) {
+  function renderProjects(category) {
     const items = projects[category] || [];
     projectContainer.innerHTML = `
-    <div class="project-list active" id="${category}">
-    ${items.map(project => `
-      <div class="project-item">
-        <img src="${project.img}" alt="${project.title}" loading="lazy" />
-        <p>${project.desc}</p>
+      <div class="project-list active" id="${category}">
+        ${items.map(project => `
+          <div class="project-item">
+            ${project.link ? `
+              <a href="${project.link}" target="_blank" rel="noopener noreferrer">
+                <img src="${project.img}" alt="${project.title}" loading="lazy" />
+                <p>${project.desc}</p>
+              </a>
+            ` : `
+              <img src="${project.img}" alt="${project.title}" loading="lazy" />
+              <p>${project.desc}</p>
+            `}
+          </div>
+        `).join('')}
       </div>
-    `).join('')}
-    </div>
     `;
 }
 
