@@ -103,9 +103,18 @@ renderProjects('photoshop');
 
 
   const burger = document.getElementById('burger');
-  const menu = document.querySelector('.menu');
+  const menu = document.getElementById('menu');
+  const links = document.querySelectorAll('.menu a');
 
   burger.addEventListener('click', () => {
       burger.classList.toggle('active');
-      menu.classList.toggle('mobile');
+      menu.classList.toggle('active');
+  });
+
+  // Ferme le menu quand on clique sur un lien
+  links.forEach(link => {
+      link.addEventListener('click', () => {
+          burger.classList.remove('active');
+          menu.classList.remove('active');
+      });
   });
