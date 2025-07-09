@@ -57,6 +57,13 @@ document.addEventListener("DOMContentLoaded", function () {
       { img: "img/inDesign/4.png", title: "Sélection cinéma", desc: "Page magazine présentant une sélection de films à découvrir." },
       { img: "img/inDesign/5.png", title: "Couverture alternative", desc: "Proposition de couverture pour un magazine." },
     ],
+    figma: [
+      { img: "img/figma/1.png", title: "Prototype d'application", desc: "Conception d’une landing page rafraîchissante pour une marque de cidre.", link:"https://www.figma.com/design/Az1xzRYN7JdwbnnIyHvzTK/WebsitePro?node-id=0-1&t=m6xIPQ8Ag9KlyW6o-1"},
+      { img: "img/figma/2.png", title: "Prototype d'application 2", desc: "Maquette d'un site sur les voitures japonaise.", link:"https://www.figma.com/design/Az1xzRYN7JdwbnnIyHvzTK/WebsitePro?node-id=0-1&t=m6xIPQ8Ag9KlyW6o-1"},
+      { img: "img/figma/3.png", title: "Prototype d'application 3", desc: "Maquette sur un site web de NFT.", link:"https://www.figma.com/design/Az1xzRYN7JdwbnnIyHvzTK/WebsitePro?node-id=0-1&t=m6xIPQ8Ag9KlyW6o-1"},
+      { img: "img/figma/4.png", title: "Prototype d'application 4", desc: "Maquette d’un site de vente de livres de science-fiction avec une ambiance spatiale.", link:"https://www.figma.com/design/Az1xzRYN7JdwbnnIyHvzTK/WebsitePro?node-id=0-1&t=m6xIPQ8Ag9KlyW6o-1"},
+      { img: "img/figma/5.png", title: "Prototype d'application 5", desc: "Maquette site web interactif sur la biodiversité marine.", link:"https://www.figma.com/design/Az1xzRYN7JdwbnnIyHvzTK/WebsitePro?node-id=0-1&t=m6xIPQ8Ag9KlyW6o-1"},
+    ],
     web: [
       { img: "img/web/1.png", title: "NightCar", desc: "Site vitrine interactif pour une marque automobile fictive. Cliquez pour le visiter.", link: "https://tebayai.github.io/carNight/main.html" },
       { img: "img/web/2.png", title: "Site expérimental 1", desc: "Prototype de site web avec animations CSS et structure responsive." },

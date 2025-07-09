@@ -209,7 +209,6 @@ header .menu a:hover {
 .about-content .column-right p {
     font-size: 1rem;
     line-height: 1.5rem;
-    text-align: justify;
     margin: 1.875rem 0;
 }
 
@@ -431,9 +430,69 @@ header .menu a:hover {
 footer {
     background-color: var(--bg-color);
     color: var(--text-color);
+    padding: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+footer .logo {
+    text-decoration: none;
+    color: var(--text-typing-color);
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 0.125rem;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer .footer-content li,
+footer .footer-content ul,
+footer .footer-content nav a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+footer .footer-content nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .bottom-footer{
+    width: 100%;
     text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
+    background-color: rgb(16, 12, 36);
+    padding: 1rem;
+}
+
+.buy-me-coffee {
+    background-color: var(--text-typing-color);
+    color: var(--bg-color);
+    padding: 0.625rem 1.25rem;
+    border: 0.125rem solid transparent;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.buy-me-coffee:hover {
+    transform: scale(1.05);
+    background-color: var(--bg-color);
+    border: 0.125rem solid var(--text-typing-color);
+    color: var(--text-typing-color);
 }
 
 
@@ -466,6 +525,7 @@ footer {
         width: 15rem;
         height:auto;
     }
+
 }
 
 @media (max-width:768px){
@@ -600,6 +660,10 @@ footer {
         font-size: 1.2rem;
         cursor: pointer;
         padding: 0.625rem 0.5rem;
+    }
+
+    header .logo{
+        margin-left: -10%;
     }
 
 }
