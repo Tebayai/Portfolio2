@@ -329,38 +329,37 @@ header .menu a:hover {
 
 
 .projects .project-list .project-item p {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  margin: 0;
-  padding: 0.5rem;
-  text-align: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 0 0 0.625rem 0.625rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 0 0 0.625rem 0.625rem;
 }
 
-  
-  .projects .project-list .project-item:hover p {
+.projects .project-list .project-item:hover p {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(-0.25rem);
-  }
-  
-  .projects .project-list .project-item:hover {
+}
+
+.projects .project-list .project-item:hover {
     transform: scale(1.05);
-  }
+}
 
 
-  .project-item a {
+.project-item a {
     text-decoration: none;
     color: inherit;
     display: block;
-  }
+}
 
 
 /****************/
